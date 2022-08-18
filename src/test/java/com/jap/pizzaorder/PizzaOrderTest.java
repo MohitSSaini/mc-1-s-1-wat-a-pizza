@@ -76,11 +76,29 @@ public class PizzaOrderTest {
     
     @Test
     public void givenNoOfGarlicBreadAndPriceOfGarlicBreadCalculateTotalPriceFailure ( ) {
+        //arrange
+        int noOfGarlicBread = 2;
+        float priceOfGarlicBread = 5.99f;
+        //act
+        float expectedOutPut = 11.98f;
+        float actualOutPut = pizzaOrder.calculatePriceOfGarlicBread ( noOfGarlicBread , priceOfGarlicBread );
+        //assert
+        Assertions.assertEquals ( expectedOutPut , actualOutPut );
+    
     
     }
     
     @Test
     public void givenNoOfBeveragesAndPriceOfBeverageCalculateTotalPriceFailure ( ) {
+        //arrange
+        int noOfBeverages = 6;
+        float priceOfBeverages = 1.99f;
+        //act
+        float expectedOutPut = 11.94f;
+        float actualOutPut = pizzaOrder.calculatePriceOfBeverage ( noOfBeverages , priceOfBeverages );
+        //assert
+        Assertions.assertEquals ( expectedOutPut , actualOutPut , 0.01 );
+    
     
     }
     
