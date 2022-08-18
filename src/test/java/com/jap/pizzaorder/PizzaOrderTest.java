@@ -32,11 +32,18 @@ public class PizzaOrderTest {
         //assert
         Assertions.assertEquals(expectedOutPut, actualOutPut);
     
-    
     }
     
     @Test
     public void givenNoOfGarlicBreadAndPriceOfGarlicBreadCalculateTotalPriceSuccess ( ) {
+        int noOfGarlicBread = 3;
+        float priceOfGarlicBread = 5.99f;
+        //act
+        float expectedOutPut = 17.97f;
+        float actualOutPut = pizzaOrder.calculatePriceOfGarlicBread ( noOfGarlicBread , priceOfGarlicBread );
+        //assert
+        Assertions.assertEquals ( expectedOutPut , actualOutPut );
+    
     
     }
     
