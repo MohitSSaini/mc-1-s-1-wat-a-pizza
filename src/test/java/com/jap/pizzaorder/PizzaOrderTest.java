@@ -62,6 +62,15 @@ public class PizzaOrderTest {
     
     @Test
     public void givenNoOfPizzaAndPriceOfPizzaCalculateTotalPriceFailure ( ) {
+        //arrange
+        int noOfPizza = 5;
+        float priceOfPizza = 12.99f;
+        //act
+        float expectedOutPut = 64.95f;
+        float actualOutPut = pizzaOrder.calculatePriceOfPizza ( noOfPizza , priceOfPizza );
+        //assert
+        Assertions.assertEquals ( expectedOutPut , actualOutPut );
+    
     
     }
     
