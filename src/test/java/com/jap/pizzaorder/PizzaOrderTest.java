@@ -112,6 +112,9 @@ public class PizzaOrderTest {
     
     @Test
     public void givenPriceOfItemsCalculateTotalBillAmount ( ) {
+        float actualOutput = pizzaOrder.calculateTotalBill ( 25.99f , 10.99f , 5.99f );
+        Assertions.assertEquals ( 25.99f + 10.99f + 5.99f , actualOutput , "There is some error in the logic" );
+    
     
     }
     
