@@ -27,11 +27,9 @@ public class PizzaOrderTest {
         float priceOfPizza = 12.99f;
         //act
         float expectedOutPut = 64.95f;
-        float actualOutPut = pizzaOrder.calculatePriceOfPizza(noOfPizza, priceOfPizza);
-    
+        float actualOutPut = pizzaOrder.calculatePriceOfPizza ( noOfPizza , priceOfPizza );
         //assert
-        Assertions.assertEquals(expectedOutPut, actualOutPut);
-    
+        Assertions.assertEquals ( expectedOutPut , actualOutPut );
     }
     
     @Test
@@ -43,7 +41,6 @@ public class PizzaOrderTest {
         float actualOutPut = pizzaOrder.calculatePriceOfGarlicBread ( noOfGarlicBread , priceOfGarlicBread );
         //assert
         Assertions.assertEquals ( expectedOutPut , actualOutPut );
-    
     
     }
     
@@ -57,7 +54,6 @@ public class PizzaOrderTest {
         float actualOutPut = pizzaOrder.calculatePriceOfBeverage ( noOfBeverages , priceOfBeverages );
         //assert
         Assertions.assertEquals ( expectedOutPut , actualOutPut );
-    
     }
     
     @Test
@@ -70,7 +66,6 @@ public class PizzaOrderTest {
         float actualOutPut = pizzaOrder.calculatePriceOfPizza ( noOfPizza , priceOfPizza );
         //assert
         Assertions.assertEquals ( expectedOutPut , actualOutPut );
-    
     
     }
     
@@ -85,7 +80,6 @@ public class PizzaOrderTest {
         //assert
         Assertions.assertEquals ( expectedOutPut , actualOutPut );
     
-    
     }
     
     @Test
@@ -99,14 +93,12 @@ public class PizzaOrderTest {
         //assert
         Assertions.assertEquals ( expectedOutPut , actualOutPut , 0.01 );
     
-    
     }
     
     @Test
     public void givenSizeofPizzaReturnPrice ( ) {
         float actualOutput = pizzaOrder.getPriceOfPizzaBasedOnSize ( 2 );
         Assertions.assertEquals ( 11.99f , actualOutput , "There is some error in the logic" );
-    
     
     }
     
@@ -115,7 +107,6 @@ public class PizzaOrderTest {
         float actualOutput = pizzaOrder.calculateTotalBill ( 25.99f , 10.99f , 5.99f );
         Assertions.assertEquals ( 25.99f + 10.99f + 5.99f , actualOutput , "There is some error in the logic" );
     
-    
     }
     
     @Test
@@ -123,14 +114,12 @@ public class PizzaOrderTest {
         float actualOutput = pizzaOrder.calculateDiscountAndReturnBillAmount ( 51.99f );
         Assertions.assertEquals ( 51.99f - 51.99f * 0.1 , actualOutput , 0.001 , "There is some error in the logic" );
     
-    
     }
     
     @Test
     public void givenTotalBillLessThan50AmountCalculateDiscount ( ) {
         float actualOutput = pizzaOrder.calculateDiscountAndReturnBillAmount ( 49.99f );
         Assertions.assertEquals ( 49.99f , actualOutput , 0.001 , "There is some error in the logic" );
-    
     
     }
 }
