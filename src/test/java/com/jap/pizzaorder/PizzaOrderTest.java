@@ -1,66 +1,85 @@
 package com.jap.pizzaorder;
 
-import com.jap.pizzaorder.PizzaOrder;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions;
+
 public class PizzaOrderTest {
     PizzaOrder pizzaOrder = null;
+    
     @Before
-    public void setUp(){
+    public void setUp ( ) {
         //Initialize the object of class PizzaOrder
-        pizzaOrder = new PizzaOrder();
+        pizzaOrder = new PizzaOrder ( );
     }
+    
     @After
-    public void tearDown(){
+    public void tearDown ( ) {
         // Assign object of PizzaOrder to null
         pizzaOrder = null;
     }
-
+    
     // Write th logic inside the test case methods
     @Test
-    public void givenNoOfPizzaAndPriceOfPizzaCalculateTotalPriceSuccess(){
-
+    public void givenNoOfPizzaAndPriceOfPizzaCalculateTotalPriceSuccess ( ) {
+        int noOfPizza = 5;
+        float priceOfPizza = 12.99f;
+        //act
+        float expectedOutPut = 64.95f;
+        float actualOutPut = pizzaOrder.calculatePriceOfPizza(noOfPizza, priceOfPizza);
+    
+        //assert
+        Assertions.assertEquals(expectedOutPut, actualOutPut);
+    
+    
     }
+    
     @Test
-    public void givenNoOfGarlicBreadAndPriceOfGarlicBreadCalculateTotalPriceSuccess(){
-
+    public void givenNoOfGarlicBreadAndPriceOfGarlicBreadCalculateTotalPriceSuccess ( ) {
+    
     }
+    
     @Test
-    public void givenNoOfBeveragesAndPriceOfBeverageCalculateTotalPriceSuccess(){
-
+    public void givenNoOfBeveragesAndPriceOfBeverageCalculateTotalPriceSuccess ( ) {
+    
     }
+    
     @Test
-    public void givenNoOfPizzaAndPriceOfPizzaCalculateTotalPriceFailure(){
-
+    public void givenNoOfPizzaAndPriceOfPizzaCalculateTotalPriceFailure ( ) {
+    
     }
+    
     @Test
-    public void givenNoOfGarlicBreadAndPriceOfGarlicBreadCalculateTotalPriceFailure(){
-
+    public void givenNoOfGarlicBreadAndPriceOfGarlicBreadCalculateTotalPriceFailure ( ) {
+    
     }
+    
     @Test
-    public void givenNoOfBeveragesAndPriceOfBeverageCalculateTotalPriceFailure(){
-
+    public void givenNoOfBeveragesAndPriceOfBeverageCalculateTotalPriceFailure ( ) {
+    
     }
+    
     @Test
-    public void givenSizeofPizzaReturnPrice(){
-
-
+    public void givenSizeofPizzaReturnPrice ( ) {
+    
+    
     }
+    
     @Test
-    public void givenPriceOfItemsCalculateTotalBillAmount(){
-
+    public void givenPriceOfItemsCalculateTotalBillAmount ( ) {
+    
     }
-
+    
     @Test
-    public void givenTotalBillAmountGreaterThan50CalculateDiscount(){
-
-
+    public void givenTotalBillAmountGreaterThan50CalculateDiscount ( ) {
+    
+    
     }
+    
     @Test
-    public void givenTotalBillLessThan50AmountCalculateDiscount(){
-
-
+    public void givenTotalBillLessThan50AmountCalculateDiscount ( ) {
+    
+    
     }
 }
