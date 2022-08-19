@@ -1,20 +1,20 @@
 package com.jap.pizzaorder;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class PizzaOrderTest {
     PizzaOrder pizzaOrder = null;
     
-    @Before
+    @BeforeEach
     public void setUp ( ) {
         //Initialize the object of class PizzaOrder
         pizzaOrder = new PizzaOrder ( );
     }
     
-    @After
+    @AfterEach
     public void tearDown ( ) {
         // Assign object of PizzaOrder to null
         pizzaOrder = null;
